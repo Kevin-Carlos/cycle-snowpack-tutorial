@@ -1,4 +1,5 @@
 module.exports = {
+  baseUrl: "./", // To match tsconfig.json
   mount: {
     public: '/',
     src: '/_dist_',
@@ -8,22 +9,8 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
-  proxy: {
-    /* ... */
-  },
   alias: {
-    /* ... */
+    server: "./server",
+    store: "./src/store"
   },
 };
