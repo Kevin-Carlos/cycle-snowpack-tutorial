@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: "./", // To match tsconfig.json
+  baseUrl: "./src", // To match tsconfig.json
   mount: {
     public: '/',
     src: '/_dist_',
@@ -10,7 +10,7 @@ module.exports = {
     '@snowpack/plugin-typescript',
   ],
   alias: {
-    server: "./server",
+    common: "./src/common",
     store: "./src/store"
   },
 };
