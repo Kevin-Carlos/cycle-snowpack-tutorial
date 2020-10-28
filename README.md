@@ -1,25 +1,23 @@
-# New Project
+# Flashcard Application (MERN)
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
-## Available Scripts
+## Purpose
 
-### npm start
+Build a flashcard application from scratch using a MERN stack using new technologies that are changing development and write a blog tutorial entry on the process of creating it and deploying it to Cycle.
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+## Technologies of Interest
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+* [Snowpack](https://snowpack.dev)
+* [Recoil](https://recoiljs.org/)
+* [Cycle](https://cycle.io)
 
-### npm run build
+## Scripts
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+To run the project run both the following script in separate terminals:
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
+`npm start` and `npm run server`
 
-### npm test
+### Contributions
 
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+Parts of this tutorial were actually a learning experience for me so, PRs on best practices and implementation details are welcome!
