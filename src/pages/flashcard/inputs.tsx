@@ -1,8 +1,8 @@
-import React, { FC, useState } from "react";
-import { useSetRecoilState } from "recoil";
-import { useRecoilCallback } from "recoil";
-import { cardState, postCards } from "store/flashcards";
-import styled from "styled-components";
+import React, { FC, useState } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { useRecoilCallback } from 'recoil';
+import { cardState, postCards } from 'store/flashcards';
+import styled from 'styled-components';
 
 type FlashcardInputProps = {};
 
@@ -22,19 +22,15 @@ export const Inputs: FC<FlashcardInputProps> = () => {
 
     const updateCards = useSetRecoilState(cardState);
 
-    updateCards(cards => [...cards as any, resp.json() ] as any)
-  }
+    updateCards((cards) => [...(cards as any), resp.json()] as any);
+  };
 
-  const removeHandler = async () => {
-    
-  }
+  const removeHandler = async () => {};
 
   return (
     <GridForm>
       <InputFieldControl>
-        <StyledLabel htmlFor="subject">
-          Subject
-        </StyledLabel>
+        <StyledLabel htmlFor="subject">Subject</StyledLabel>
         <StyledInput
           type="text"
           name="subject"
@@ -43,9 +39,7 @@ export const Inputs: FC<FlashcardInputProps> = () => {
         />
       </InputFieldControl>
       <InputFieldControl>
-        <StyledLabel htmlFor="description">
-          Description
-        </StyledLabel>
+        <StyledLabel htmlFor="description">Description</StyledLabel>
         <StyledInput
           type="text"
           name="description"
@@ -53,12 +47,8 @@ export const Inputs: FC<FlashcardInputProps> = () => {
           onInput={(e) => setDescription(e.currentTarget.value)}
         />
       </InputFieldControl>
-      <StyledButton onClick={() => submitHandler()}>
-        Submit
-      </StyledButton>
-      <StyledButton onClick={() => removeHandler()}>
-        Remove
-      </StyledButton>
+      <StyledButton onClick={() => submitHandler()}>Submit</StyledButton>
+      <StyledButton onClick={() => removeHandler()}>Remove</StyledButton>
     </GridForm>
   );
 };

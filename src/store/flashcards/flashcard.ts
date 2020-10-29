@@ -13,14 +13,14 @@ export type FlashcardResponseT = {
 };
 
 export const cardState = atom({
-  key: "flashcard-state",
+  key: 'flashcard-state',
   default: () => fetchCards || [],
 });
 
 export const fetchCards = selector({
   key: 'fetch-flashcards',
   get: async () => {
-    const resp = await fetch(endpoint, fetchSettings("GET"));
+    const resp = await fetch(endpoint, fetchSettings('GET'));
 
     if (!resp.ok) {
       throw resp.statusText;
@@ -32,9 +32,10 @@ export const fetchCards = selector({
   },
 });
 
-export const postCards = (value: any) => fetch(endpoint + "/add", fetchSettings("POST", value));
+export const postCards = (value: any) =>
+  fetch(endpoint + '/add', fetchSettings('POST', value));
 
-export const cardIndexState = atom({
-  key: "flashcard-index-state",
+export const cardArrayTotalLength = atom({
+  key: 'flashcard-index-state',
   default: 0,
 });
